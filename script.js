@@ -1,24 +1,35 @@
 let contador = 0;
 
 const display = document.getElementById("contador");
+const botones = document.querySelectorAll("button");
 
-function actualizar() {
-  display.textContent = contador;
+function actualizarContador() {
+    display.textContent = contador;
 
-  // Cambia color cuando llegue a 10
-  if (contador === 10) {
-    display.classList.add("rojo");
-  } else {
-    display.classList.remove("rojo");
-  }
+    // Cambia color en los múltiplos de 10
+    if (contador > 0 && contador % 10 === 0) {
+        display.style.color = "red";
+
+        botones.forEach(boton => {
+            boton.style.backgroundColor = "red";
+            boton.style.color = "white";
+        });
+    } else {
+        display.style.color = "black";
+
+        botones.forEach(boton => {
+            boton.style.backgroundColor = "#007bff";
+            boton.style.color = "white";
+        });
+    }
 }
 
 function incrementar() {
-  contador++;
-  actualizar();
+    contador++;
+    actualizarContador();
 }
 
 function decrementar() {
-  contador--;
-  actualizar();
+    contador--;
+    actualizarContador();
 }
