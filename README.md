@@ -18,3 +18,5 @@ Proyecto básico de un contador usando JavaScript que permite incrementar y decr
 Tatiana Marrugo Jiménez
 
 Karen Nathalia Martinez
+
+Nicolas Alejandro Pirajan Rivera
